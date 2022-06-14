@@ -1,3 +1,266 @@
+* {
+  list-style-type: none
+}
+
 .App {
   text-align: center;
+}
+
+.Header {
+  padding: 0.1rem;
+  text-align: center;
+  background: #313638;
+  color: white;
+  font-size: 1rem;
+}
+
+.Header a {
+  text-decoration: none;
+  color:white;
+}
+
+.Navbar {
+  background-color:   #9DA6AA;
+  padding: 4px;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Navbar div {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.Navbar a {
+  text-decoration: none;
+  color:white;
+}
+
+.Footer {
+  padding: 3px;
+  text-align: center;
+  color: black;
+  font-size: 0.8rem;
+  margin-top:100px
+}
+
+.ListArticles__container {
+  border:1px rgb(14, 53, 193) solid;
+  display:flex;
+  padding: 5px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ListArticles__item {
+  border:1px rgb(19, 24, 41) solid;
+  margin:0.25rem;
+  padding: 0.5rem;
+  width:98%;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+
+
+.TopicMenu {
+  background-color: #DDE0E3;
+  padding: 4px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.TopicMenu div {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  text-transform: capitalize;
+}
+
+.TopicMenu a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+
+.Article__container {
+  border:1px rgb(14, 53, 193) solid;
+  display:flex;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Article__item {
+  border:1px rgb(19, 24, 41) solid;
+  margin:0.25rem;
+  padding: 0.5rem;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+
+#VoteError {
+  color:red;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.Comments__container {
+  border:1px rgb(193, 14, 163) solid;
+  background-color: rgb(255, 255, 255);
+  display:flex;
+  padding: 5px;
+  flex-direction:column-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Comments__item {
+  border:1px rgb(19, 24, 41) solid;
+  margin:0.25rem;
+  padding: 0.5rem;
+  width:98%;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+  font-style: italic;
+  flex-direction: column;
+}
+
+
+.LoginBar {
+  padding-right: 1rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.LoginBar span {
+  margin:5px;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.LoginBar button {
+  margin-left: 3px;
+  font-style: italic;
+  font-size: 0.8rem;
+  }
+
+fieldset {
+  width:75%;
+  margin:0 auto
+}
+
+.PostAComment_container {
+  border:1px rgb(14, 53, 193) solid;
+  display:flex;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.PostAComment__form {
+  border:1px rgb(19, 24, 41) solid;
+  margin:0.25rem;
+  padding: 0.5rem;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display:flex;
+}
+
+.PostAComment__form textarea {
+  width: 90vw;
+}
+
+.PostAComment__form button {
+  flex-wrap: wrap;
+  justify-content: center;
+  display:flex;
+}
+
+.SortMenu__sortby {
+  background-color: #cfdae4;
+  padding: 4px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.SortMenu__sortby div {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  text-transform: capitalize;
+}
+
+.SortMenu__sortby a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.SortMenu__order {
+  background-color: #9db2c7b3;
+  padding: 4px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.SortMenu__order div {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  text-transform: capitalize;
+}
+
+.SortMenu__order a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.MyDetails {
+  border:1px rgb(14, 53, 193) solid;
+  display:flex;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.MyDetails__information {
+  border:1px rgb(19, 24, 41) solid;
+  margin:0.25rem;
+  padding: 0.5rem;
+  width:50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.MyDetails__information img {
+width: 50%;
+height: 50;
 }
