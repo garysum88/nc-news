@@ -5,8 +5,8 @@ import { LoadingMsg, ArticleNotExistsMsg} from "../utils/messages"
 
 
 import Vote from "./Vote";
-
 import ArticleComments from "./ArticleComments";
+import PostAComment from "./PostAComment"
 
 function ViewArticle () {
 
@@ -29,7 +29,7 @@ function ViewArticle () {
     .catch((err)=> {
      setIsError(true)
     })
-  },[article_id])
+  },[article_id,submitComments])
 
 
   if (isError) {
@@ -63,8 +63,8 @@ function ViewArticle () {
             </div>
       </div>
       
-
-      <ArticleComments article_id={article_id}/>
+      <PostAComment submitComments={submitComments} setSubmitComments={setSubmitComments} article_id={article_id}/>
+      <ArticleComments article_id={article_id} submitComments={submitComments} />
 
 
       </>

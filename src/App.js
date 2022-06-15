@@ -1,5 +1,5 @@
 import './App.css';
-
+import { useState } from 'react';
 import { Routes, Route } from "react-router-dom"
 
 import Header from './components/Header';
@@ -11,14 +11,14 @@ import MyAccount from './components/MyAccount';
 import Footer from './components/Footer';
 import LoginBar from './components/UserLoginStatusBar';
 
-
+import { UserLoginContext } from './contexts/User';
 
 function App() {
 
-
+  const [userLogin, setUserLogin]  = useState("tickle122")
   
   return (
-
+    <UserLoginContext.Provider value={{userLogin, setUserLogin}}>
     <div className="App">
         <Header />
         <Navbar />
@@ -32,7 +32,7 @@ function App() {
         </Routes>
         <Footer />
     </div>
-
+    </UserLoginContext.Provider>
   )
 }
 
