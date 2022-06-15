@@ -21,3 +21,9 @@ export const fetchTopics = () => {
     return api.get('/topics')
  
  }
+
+ export const fetchArticleByID = (article_id) => {
+
+    return api.get(`/articles/${article_id}`)
+ 
+ }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useSearchParams} from "react-router-dom"
+import { useParams, useSearchParams, Link} from "react-router-dom"
 
 import { fetchArticles, fetchArticlesByTopic } from "../utils/api";
 import { LoadingMsg } from "../utils/messages"
@@ -60,7 +60,7 @@ function ListArticles () {
         { articles.map((article)=> {
           return (
             <div key={article.article_id} className="ListArticles__item">
-            <h4>{article.title}</h4>
+            <h4><Link to={`/articles/${article.article_id}`}>{article.title}</Link></h4>
             <p>Topic : {article.topic}</p>
             <p>Author : {article.author}</p>
             <p>Created at : {article.created_at}</p>

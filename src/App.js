@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Articles from './components/Articles';
-
+import ViewArticle from './components/ViewArticle';
 import MyAccount from './components/MyAccount';
 import Footer from './components/Footer';
 import LoginBar from './components/UserLoginStatusBar';
@@ -25,8 +25,9 @@ function App() {
         <LoginBar />
         <Routes>
                 <Route path="/" element={<Home />}></Route>
-                <Route path="/articles" element={<Articles />}></Route>
+                <Route path="/articles/topic/all" element={<Articles />}></Route>
                 <Route path="/articles/topic/:topic" element={<Articles />}></Route>
+                <Route path="/articles/:article_id" element={<ViewArticle />}></Route>
                 <Route path="/myaccount" element={<MyAccount />}></Route>
         </Routes>
         <Footer />
