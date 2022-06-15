@@ -40,3 +40,8 @@ export const PostCommentFailMsg = () => {
     return  <p>An error occured when posting a comment!</p>
 
 }
+
+export const ArticleNotExistsMsg = () => {
+    return  <p>The article ID you entered does not exist!</p>
+
+}

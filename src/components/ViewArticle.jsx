@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom"
 import { fetchArticleByID } from "../utils/api";
-import { LoadingMsg } from "../utils/messages"
+import { LoadingMsg, ArticleNotExistsMsg} from "../utils/messages"
 
 
 
@@ -12,6 +12,7 @@ function ViewArticle () {
 
   const [ article, setArticle ] = useState({})
   const [ isLoading, setIsLoading ] = useState(true)
+  const [ isError , setIsError] = useState(false)
 
 
 
@@ -20,15 +21,26 @@ function ViewArticle () {
   let { article_id } = useParams()
 
   useEffect(()=>{
-    fetchArticleByID(article_id).then(({data})=>{
+    fetchArticleByID(article_id)
+    .then(({data})=>{
       setArticle(data.article)
       setIsLoading(false)
     })
+    .catch((err)=> {
+     setIsError(true)
+    })
   },[article_id])
+
+
+  if (isError) {
+      return ArticleNotExistsMsg()
+  }
 
   if (isLoading) {
     return LoadingMsg()
   }
+
+
 
 
     return (
