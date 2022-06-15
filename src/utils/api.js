@@ -27,3 +27,9 @@ export const fetchTopics = () => {
     return api.get(`/articles/${article_id}`)
  
  }
+
+ export const patchVote = (article_id,reqBody) => {
+
+  return api.patch(`/articles/${article_id}`,reqBody)
+
+}
