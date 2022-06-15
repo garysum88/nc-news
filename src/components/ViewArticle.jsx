@@ -6,7 +6,7 @@ import { LoadingMsg, ArticleNotExistsMsg} from "../utils/messages"
 
 import Vote from "./Vote";
 
-
+import ArticleComments from "./ArticleComments";
 
 function ViewArticle () {
 
@@ -14,7 +14,7 @@ function ViewArticle () {
   const [ isLoading, setIsLoading ] = useState(true)
   const [ isError , setIsError] = useState(false)
 
-
+  const [ submitComments, setSubmitComments ] = useState(0)
 
   const navigate = useNavigate()
 
@@ -64,6 +64,7 @@ function ViewArticle () {
       </div>
       
 
+      <ArticleComments article_id={article_id}/>
 
 
       </>

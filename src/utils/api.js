@@ -33,3 +33,9 @@ export const fetchTopics = () => {
   return api.patch(`/articles/${article_id}`,reqBody)
 
 }
+
+export const fetchCommentsByID = (article_id) => {
+
+  return api.get(`/articles/${article_id}/comments`)
+
+}
