@@ -4,14 +4,19 @@ import { useParams, useSearchParams, Link} from "react-router-dom"
 import { fetchArticles, fetchArticlesByTopic } from "../utils/api";
 import { LoadingMsg } from "../utils/messages"
 
-function ListArticles () {
+function ListArticles ({orderState,setOrderState}) {
 
   const [articles, setArticles] = useState({})
   const [isLoading, setIsLoading] = useState(true)
 
   const [searchParams, setSearchParams] = useSearchParams();
   
+  const sort_by = searchParams.get('sort_by')
 
+  let SortByStr = ""
+  if (sort_by) {
+    SortByStr = `?sort_by=${sort_by}&order=${orderState}`
+  }
 
 
   let { topic } = useParams()
@@ -27,7 +32,7 @@ function ListArticles () {
   useEffect(()=>{
 
     if (topicSelected==="all") {
-      fetchArticles()
+      fetchArticles(SortByStr)
       .then(({data})=>{
         setArticles(data.articles)
         setIsLoading(false)
@@ -35,14 +40,14 @@ function ListArticles () {
     }
 
     else {
-      fetchArticlesByTopic(topic)
+      fetchArticlesByTopic(topic,SortByStr)
       .then(({data})=>{
         setArticles(data.articles)
         setIsLoading(false)
       })
     }
  
-  },[topic])
+  },[topic,sort_by,orderState])
 
 
   if (isLoading) {

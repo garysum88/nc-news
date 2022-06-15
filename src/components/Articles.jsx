@@ -3,6 +3,7 @@ import { LoadingMsg } from "../utils/messages";
 
 import ListArticles from "./ListArticles";
 import TopicMenu from "./TopicMenu";
+import DisplayOptionMenu from "./DisplayOptionMenu";
 
 import { useState, useEffect } from "react"
 
@@ -36,7 +37,9 @@ function Articles () {
 
       <TopicMenu topics={topics} />
 
-      <ListArticles />
+      <DisplayOptionMenu orderState={orderState} setOrderState={setOrderState}/>
+
+      <ListArticles  orderState={orderState} setOrderState={setOrderState}/>
 
 
       </>

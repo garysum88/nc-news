@@ -10,7 +10,7 @@ const { userLogin } = useContext(UserLoginContext)
 const [ submitStatus, setSubmitStatus ] = useState("pending")
 const [ myComment, setMyComment ] = useState("")
 
-const handleLogin = (event) => {
+const handleSubmit = (event) => {
 
 event.preventDefault()
 
@@ -43,7 +43,7 @@ if (userLogin==="") {
       <div className="PostAComment_container">
       <div className="PostAComment__form">
 
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleSubmit}>
       { submitStatus === "submitted" ? PostCommentSuccessMsg() : (submitStatus ==="error" ? PostCommentFailMsg : null)}
       <textarea required value={myComment} name="comment" id="comment" placeholder="Leave a comment..." 
       onChange={(event)=> { 
