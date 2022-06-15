@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { fetchArticles } from "../utils/api";
-import { loadingMsg } from "../utils/messages"
+import { LoadingMsg } from "../utils/messages"
 
 function ListArticles () {
 
@@ -25,7 +25,7 @@ function ListArticles () {
     },[])
 
   if (isLoading) {
-    return loadingMsg()
+    return LoadingMsg()
   }
 
 

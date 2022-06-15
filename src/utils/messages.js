@@ -1,22 +1,22 @@
 
-export const loadingMsg = () => {
+export const LoadingMsg = () => {
 
     return <p>Loading...</p>
 
 }
 
-export const voteErrorMsg = () => {
+export const VoteErrorMsg = () => {
 
     return <p><span id="VoteError">An error is occured when casting a vote</span></p>
 
 }
 
 
-export const noLoginMsg = () => {
+export const NoLoginMsg = () => {
     return <p>You must log in to have full access to this app.</p>
 }
 
-export const loginMsg = () => {
+export const LoginMsg = () => {
     return  (
         <>
         <p>You can read articles, leave and manage your comments in this app.</p>
@@ -27,16 +27,16 @@ export const loginMsg = () => {
     )
 }
 
-export const noLoginMsgForCommment = () => {
+export const NoLoginMsgForCommment = () => {
     return  <p><em>Log in your account to leave a comment.</em></p>
 
 }
 
-export const postCommentSuccessMsg = () => {
+export const PostCommentSuccessMsg = () => {
     return  <p>You have just posted a comment!</p>
 
 }
-export const postCommentFailMsg = () => {
+export const PostCommentFailMsg = () => {
     return  <p>An error occured when posting a comment!</p>
 
 }
