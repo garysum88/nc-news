@@ -27,7 +27,7 @@ function App() {
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/articles/topic/all" element={<Articles />}></Route>
                 <Route path="/articles/topic/:topic" element={<Articles />}></Route>
-                <Route path="/view/:article_id" element={<ViewArticle />}></Route>
+                <Route path="/articles/:article_id" element={<ViewArticle />}></Route>
                 <Route path="/myaccount" element={<MyAccount />}></Route>
         </Routes>
         <Footer />
