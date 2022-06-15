@@ -4,7 +4,7 @@ import { fetchArticleByID } from "../utils/api";
 import { LoadingMsg, ArticleNotExistsMsg} from "../utils/messages"
 
 
-
+import Vote from "./Vote";
 
 
 
@@ -57,7 +57,7 @@ function ViewArticle () {
             <p>Topic : {article.topic}</p>
             <p>Created at: {article.created_at}</p>
             <p><em>{article.comment_count} comment{article.comment_count !==0 ? "s" : null} </em></p>
-            
+            <Vote article_id={article_id} votes={article.votes}/>
             <p></p>
             <p><button type="Submit" onClick={() => navigate(-1)}>Back</button> </p>
             </div>
