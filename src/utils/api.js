@@ -39,3 +39,15 @@ export const fetchCommentsByID = (article_id) => {
   return api.get(`/articles/${article_id}/comments`)
 
 }
+
+export const postComment = (article_id,commentObj) => {
+
+  return api.post(`/articles/${article_id}/comments`,commentObj)
+
+}
+
+export const fetchUsers = () => {
+
+  return api.get(`/users`)
+
+}

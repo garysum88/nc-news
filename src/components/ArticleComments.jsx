@@ -1,11 +1,11 @@
-import { useState, useEffect, useContext} from "react";
+import { useState, useEffect } from "react";
 import { fetchCommentsByID} from "../utils/api";
 import { LoadingMsg } from "../utils/messages";
 
 
 
 
-function ArticleComments ({article_id}) {
+function ArticleComments ({article_id, submitStatus, submitComments}) {
 
 
 
@@ -21,7 +21,7 @@ function ArticleComments ({article_id}) {
       setIsLoading(false)
     })
  
-  },[])
+  },[article_id, submitComments,loadedComments])
 
 
   if (isLoading) {
