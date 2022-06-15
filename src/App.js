@@ -25,7 +25,8 @@ function App() {
         <LoginBar />
         <Routes>
                 <Route path="/" element={<Home />}></Route>
-                <Route path="/articles/*" element={<Articles />}></Route>
+                <Route path="/articles" element={<Articles />}></Route>
+                <Route path="/articles/topic/:topic" element={<Articles />}></Route>
                 <Route path="/myaccount" element={<MyAccount />}></Route>
         </Routes>
         <Footer />
