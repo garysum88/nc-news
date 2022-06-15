@@ -9,3 +9,15 @@ export const fetchArticles = () => {
       return api.get(`/articles`)
 
 }
+
+export const fetchArticlesByTopic = (topic) => {
+
+    return api.get(`/articles?topic=${topic}`)
+  }
+ 
+
+export const fetchTopics = () => {
+
+    return api.get('/topics')
+ 
+ }
