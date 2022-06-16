@@ -2,7 +2,7 @@ import { useState } from "react"
 import { deleteComment } from "../utils/api"
 import { DeleteCommentErrMsg } from "../utils/messages"
 
-function CommentRemoval ({setLoadedComments, comment_id, setLatestCommentCrt}) {
+function CommentRemoval ({setLoadedComments, comment_id, setLatestCommentCrt, setDeleteCommentCrt}) {
 
     const [isError, setIsError] = useState(false)
 
@@ -21,6 +21,8 @@ function CommentRemoval ({setLoadedComments, comment_id, setLatestCommentCrt}) {
             let newCrt = currCrt - 1
             return newCrt
         })
+
+        setDeleteCommentCrt((currCrt)=>currCrt+1)
         
         setIsError(false)
 

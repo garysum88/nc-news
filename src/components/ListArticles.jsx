@@ -28,14 +28,14 @@ function ListArticles () {
   }
 
   if (order && sort_by===null) {
-    fetchStr = `?sort_by=created_at&order=${order}"}`
+    fetchStr = `?sort_by=created_at&order=${order}`
   }
 
   if (order && sort_by) {
     fetchStr = `?sort_by=${sort_by}&order=${order}`
   }
 
-console.log(fetchStr)
+  console.log(fetchStr)
 
   let { topic } = useParams()
   let topicSelected = ""

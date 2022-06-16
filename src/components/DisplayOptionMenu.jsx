@@ -17,7 +17,7 @@ function DisplayOptionMenu ({orderState,setOrderState}) {
         <div className={sort_by==="title" ? "SelectedLink" : "NormalLink"}><Link to={`/${location}?sort_by=title${order? "&order=" + order : "" }`}>Title</Link></div>
         <div className={sort_by==="topic" ? "SelectedLink" : "NormalLink"}><Link to={`/${location}?sort_by=topic${order? "&order=" + order : ""}`}>Topic</Link></div>
         <div className={sort_by==="author" ? "SelectedLink" : "NormalLink"}><Link to={`/${location}?sort_by=author${order? "&order=" + order : ""}`}>Author</Link></div>
-        <div className={sort_by==="votes" ? "SelectedLink" : "NormalLink"}><Link to={`/${location}?sort_by=votes${order? "&order=" + order : ""}`}>No.of vote</Link></div>
+        <div className={sort_by==="votes" ? "SelectedLink" : "NormalLink"}><Link to={`/${location}?sort_by=votes${order? "&order=" + order : ""}`}>Votes</Link></div>
       </div>
 
       <div className="SortMenu__order">

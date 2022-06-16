@@ -32,7 +32,7 @@ function Articles () {
       <>
 
 
-      <h3>Articles</h3>
+      <h3>🗞 Articles 📰</h3>
 
       <TopicMenu topics={topics} />
 
