@@ -3,7 +3,7 @@ import { UserLoginContext } from "../contexts/User";
 import { postComment } from "../utils/api";
 import { NoLoginMsgForCommment, PostCommentFailMsg, PostCommentSuccessMsg } from "../utils/messages"
 
-function PostAComment ({article_id, setSubmitComments, submitComments, setLatestCommentCrt}) {
+function PostAComment ({article_id, setSubmitComments, setLatestCommentCrt}) {
 
 const { userLogin } = useContext(UserLoginContext)
 

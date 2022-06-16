@@ -6,7 +6,7 @@ import { UserLoginContext } from "../contexts/User";
 import CommentRemoval from "./CommentRemoval";
 
 
-function ArticleComments ({article_id, submitStatus, submitComments, setDeletedComments, setLatestCommentCrt}) {
+function ArticleComments ({article_id, submitComments, setLatestCommentCrt}) {
 
   const { userLogin } = useContext(UserLoginContext)
 
