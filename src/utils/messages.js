@@ -21,7 +21,7 @@ export const LoginMsg = () => {
         <>
         <p>You can read articles, leave and manage your comments in this app.</p>
 
-        <img src="https://onstipe.com/wp-content/themes/customtheme/assets/images/sma-onstipe.png" alt="home" width="50%" height="50%"></img>
+        <img src="https://onstipe.com/wp-content/themes/customtheme/assets/images/sma-onstipe.png" alt="home" width="50%"></img>
         </>
 
     )
@@ -53,10 +53,5 @@ export const DeletingComment = () => {
 
 export const DeleteCommentErrMsg = () => {
     return  <p>An error is occured when deleting the comment.</p>
-
-}
-
-export const SelectTopicAndSortByError = () => {
-    return  <p>Bad request (Non-existent topic / Invalid sorting / Invalid order) </p>
 
 }

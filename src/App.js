@@ -11,6 +11,7 @@ import MyAccount from './components/MyAccount';
 import Footer from './components/Footer';
 import LoginBar from './components/UserLoginStatusBar';
 import ErrorPage from './components/ErrorPage';
+import ErrorPageForInvalidTopic from './components/ErrorPageForInvalidTopic';
 
 import { UserLoginContext } from './contexts/User';
 
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/articles/:article_id" element={<ViewArticle />}></Route>
                 <Route path="/myaccount" element={<MyAccount />}></Route>
                 <Route path="*" element={<ErrorPage />} />
+                <Route path="/invalidtopic" element={<ErrorPageForInvalidTopic />} />   
         </Routes>
         <Footer />
     </div>

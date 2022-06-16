@@ -49,19 +49,21 @@
 }
 
 .ListArticles__container {
-  border:1px rgb(14, 53, 193) solid;
   display:flex;
-  padding: 5px;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .ListArticles__item {
   border:1px rgb(19, 24, 41) solid;
-  margin:0.25rem;
+  background-color: #eaeff2;
+  border-radius: 1%;
+  box-shadow:  2px 2px;
   padding: 0.5rem;
-  width:98%;
+  margin: 0.5rem;
+  width:90%;
   flex-wrap: wrap;
   justify-content: center;
   text-align: left;
