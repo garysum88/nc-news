@@ -6,7 +6,7 @@ import { UserLoginContext } from "../contexts/User";
 import CommentRemoval from "./CommentRemoval";
 
 
-function ArticleComments ({article_id, submitStatus, submitComments, setDeletedComments}) {
+function ArticleComments ({article_id, submitStatus, submitComments, setDeletedComments, setLatestCommentCrt}) {
 
   const { userLogin } = useContext(UserLoginContext)
 
@@ -43,7 +43,7 @@ function ArticleComments ({article_id, submitStatus, submitComments, setDeletedC
             <p>"{comment.body}"</p>
             <p> — {comment.author}</p> 
             </blockquote>
-            { comment.author === userLogin ? <CommentRemoval comment_id={comment.comment_id} setLoadedComments={setLoadedComments} setDeletedComments={setDeletedComments}/> : null }
+            { comment.author === userLogin ? <CommentRemoval comment_id={comment.comment_id} setLoadedComments={setLoadedComments} setLatestCommentCrt={setLatestCommentCrt}/> : null }
             </div>
           )
         })}

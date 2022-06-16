@@ -15,8 +15,7 @@ function ViewArticle () {
   const [ isError , setIsError] = useState(false)
 
   const [ submitComments, setSubmitComments ] = useState(0)
-
-  const [ latestCommentCrt, setLatestCommentCrt ] = useState(0)
+  const [ deletedComments, setDeletedComments ] = useState([])
 
   const dayjs = require('dayjs')
   const convertedDateAndTime = dayjs(article.created_at).format("DD/MM/YYYY HH:MM"); 
@@ -30,15 +29,12 @@ function ViewArticle () {
     fetchArticleByID(article_id)
     .then(({data})=>{
       setArticle(data.article)
-      setLatestCommentCrt(data.article.comment_count)
       setIsLoading(false)
     })
     .catch((err)=> {
      setIsError(true)
     })
-  },[article_id])
-
-
+  },[article_id,submitComments,deletedComments])
 
 
   if (isError) {
@@ -66,15 +62,15 @@ function ViewArticle () {
             <p>Author : {article.author}</p>
             <p>Topic : {article.topic}</p>
             <p>Created at: {convertedDateAndTime}</p>
-            <p><em>{latestCommentCrt} comment{latestCommentCrt !==0 ? "s" : null} </em></p>
+            <p><em>{article.comment_count} comment{article.comment_count !==0 ? "s" : null} </em></p>
             <Vote article_id={article_id} votes={article.votes}/>
             <p></p>
             <p><button type="Submit" onClick={() => navigate(-1)}>Back</button> </p>
             </div>
       </div>
       
-      <PostAComment article_id={article_id} submitComments={submitComments} setSubmitComments={setSubmitComments} setLatestCommentCrt={setLatestCommentCrt}/>
-      <ArticleComments article_id={article_id} submitComments={submitComments} setLatestCommentCrt={setLatestCommentCrt}/>
+      <PostAComment submitComments={submitComments} setSubmitComments={setSubmitComments} article_id={article_id}/>
+      <ArticleComments article_id={article_id} submitComments={submitComments} setDeletedComments={setDeletedComments}/>
 
 
       </>

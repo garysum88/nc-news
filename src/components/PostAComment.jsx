@@ -3,7 +3,7 @@ import { UserLoginContext } from "../contexts/User";
 import { postComment } from "../utils/api";
 import { NoLoginMsgForCommment, PostCommentFailMsg, PostCommentSuccessMsg } from "../utils/messages"
 
-function PostAComment ({article_id, setSubmitComments, submitComments}) {
+function PostAComment ({article_id, setSubmitComments, submitComments, setLatestCommentCrt}) {
 
 const { userLogin } = useContext(UserLoginContext)
 
@@ -24,6 +24,7 @@ postComment(article_id,commentObj)
   setSubmitComments((curr)=> curr +1 )
   setSubmitStatus("submitted")
   setMyComment("")
+  setLatestCommentCrt((currCrt)=> currCrt+1)
 })
 .catch((err)=>{
   setSubmitComments((curr)=> curr -1 )
