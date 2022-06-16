@@ -68,7 +68,7 @@ function Home () {
       <>
 
 
-      <h3>Welcome to NC News! </h3>
+      <h3> 🎊 Welcome to NC News! 🎉</h3>
       
      { userLogin==="" ? NoLoginMsg() : LoginMsg() }
       

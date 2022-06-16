@@ -17,7 +17,7 @@ import { UserLoginContext } from './contexts/User';
 
 function App() {
 
-  const [userLogin, setUserLogin]  = useState("tickle122")
+  const [userLogin, setUserLogin]  = useState("")
   
   return (
     <UserLoginContext.Provider value={{userLogin, setUserLogin}}>

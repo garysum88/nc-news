@@ -64,7 +64,6 @@ function ViewArticle () {
             <p className="normalFont">{article.body}</p>
             <p className="smallerFont"><strong>Author:</strong> {article.author}</p>
             <p className="smallerFont"><strong>Date</strong>: {convertedDateAndTime}</p>
-            {/* <p className="smallerFont">💬  {latestCommentCrt}</p> */}
             <Vote article_id={article_id} votes={article.votes} latestCommentCrt={latestCommentCrt}/>
             <p></p>
             <p className="normalFont"><button type="Submit" onClick={() => navigate(-1)}>Back</button> </p>

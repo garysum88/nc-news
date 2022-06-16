@@ -78,16 +78,19 @@ cursor: pointer;
 
 .smallerFont {
   font-size: smaller;
-  margin-left: 1rem
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .normalFont {
-  margin-left: 1rem
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .largerFont {
   font-size:larger;
-  margin-left: 1rem
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 
@@ -354,6 +357,9 @@ height: 50%;
   font-weight:normal;
 }
 
+
+
+
 @media (min-width : 600px) {
   .ListArticles__container {
     display:flex;
@@ -376,3 +382,5 @@ height: 50%;
     flex-grow:1
   }
 }
+
+

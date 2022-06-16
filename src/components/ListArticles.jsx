@@ -35,8 +35,6 @@ function ListArticles () {
     fetchStr = `?sort_by=${sort_by}&order=${order}`
   }
 
-console.log(fetchStr)
-
   let { topic } = useParams()
   let topicSelected = ""
 

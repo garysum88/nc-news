@@ -44,7 +44,7 @@ if (isLoading) {
 
     return (
       <>
-      <h3>My Account</h3>
+      <h3>🔑 My Account 👤</h3>
       <div className="MyDetails">
       <div className="MyDetails__information">
       <p><img src={thisUser.avatar_url} alt={userLogin}></img></p>
