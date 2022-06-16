@@ -4,19 +4,18 @@ import { useParams, useSearchParams, Link} from "react-router-dom"
 import { fetchArticles, fetchArticlesByTopic } from "../utils/api";
 import { LoadingMsg } from "../utils/messages"
 
-function ListArticles () {
+function ListArticles ({orderState,setOrderState}) {
 
   const [articles, setArticles] = useState({})
   const [isLoading, setIsLoading] = useState(true)
 
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   
   const sort_by = searchParams.get('sort_by')
-  const order = searchParams.get('order')
 
-  let fetchStr = ""
+  let SortByStr = ""
   if (sort_by) {
-    fetchStr = `?sort_by=${sort_by? sort_by : ""}&order=${order? order : "asc"}`
+    SortByStr = `?sort_by=${sort_by}&order=${orderState}`
   }
 
 
@@ -33,7 +32,7 @@ function ListArticles () {
   useEffect(()=>{
 
     if (topicSelected==="all") {
-      fetchArticles(fetchStr)
+      fetchArticles(SortByStr)
       .then(({data})=>{
         setArticles(data.articles)
         setIsLoading(false)
@@ -41,14 +40,14 @@ function ListArticles () {
     }
 
     else {
-      fetchArticlesByTopic(topic,fetchStr)
+      fetchArticlesByTopic(topic,SortByStr)
       .then(({data})=>{
         setArticles(data.articles)
         setIsLoading(false)
       })
     }
  
-  },[topic,topicSelected,sort_by,order,fetchStr])
+  },[topic,sort_by,orderState])
 
 
   if (isLoading) {

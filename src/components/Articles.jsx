@@ -13,7 +13,6 @@ function Articles () {
 
   const [ isLoading, setIsLoading ] = useState(true)
   const [ topics, setTopics ] = useState({})
-  const [ orderState, setOrderState ] = useState("asc")
 
   useEffect(()=> {
 
@@ -37,9 +36,9 @@ function Articles () {
 
       <TopicMenu topics={topics} />
 
-      <DisplayOptionMenu orderState={orderState} setOrderState={setOrderState}/>
+      <DisplayOptionMenu />
 
-      <ListArticles  orderState={orderState} setOrderState={setOrderState}/>
+      <ListArticles />
 
 
       </>
