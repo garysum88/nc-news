@@ -57,3 +57,9 @@ export const fetchUsers = () => {
   return api.get(`/users`)
 
 }
+
+export const deleteComment = (comment_id) => {
+
+  return api.delete(`/comments/${comment_id}`)
+
+}

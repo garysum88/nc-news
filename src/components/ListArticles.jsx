@@ -14,6 +14,8 @@ function ListArticles () {
   const sort_by = searchParams.get('sort_by')
   const order = searchParams.get('order')
 
+  const dayjs = require('dayjs')
+
   let fetchStr = ""
   if (sort_by) {
     fetchStr = `?sort_by=${sort_by? sort_by : ""}&order=${order? order : "asc"}`
@@ -69,7 +71,7 @@ function ListArticles () {
             <h4><Link to={`/articles/${article.article_id}`}>{article.title}</Link></h4>
             <p>Topic : {article.topic}</p>
             <p>Author : {article.author}</p>
-            <p>Created at : {article.created_at}</p>
+            <p>Created at : {dayjs(article.created_at).format("DD/MM/YYYY HH:MM")}</p>
             <p><em>{article.comment_count} comment{article.comment_count !==0 ? "s" : null} </em> |  {article.votes} vote{ article.vote===0 ? null : "s"}</p>
             </div>
           )
