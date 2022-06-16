@@ -16,7 +16,7 @@ function DisplayOptionMenu ({orderState,setOrderState}) {
         <div><Link to={`/${location}?sort_by=title${order? "&order=" + order : ""}}`}>Title</Link></div>
         <div><Link to={`/${location}?sort_by=topic${order? "&order=" + order : ""}`}>Topic</Link></div>
         <div><Link to={`/${location}?sort_by=author${order? "&order=" + order : ""}`}>Author</Link></div>
-        <div><Link to={`/${location}?sort_by=created_at${order? "&order=" + order : ""}`}>Date created</Link></div>
+        <div><Link to={`/${location}?sort_by=created_at${order? "&order=" + order : ""}`}>Date</Link></div>
         <div><Link to={`/${location}?sort_by=votes${order? "&order=" + order : ""}`}>No.of vote</Link></div>
         <div><Link to={`/${location}?${order? "order=" + order : ""}`}> | (clear)</Link></div>
       </div>
