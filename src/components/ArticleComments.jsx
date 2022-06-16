@@ -33,16 +33,16 @@ function ArticleComments ({article_id, submitComments, setLatestCommentCrt}) {
     return (
       <>
 
-      <h4>Comments: </h4>
+      <h4>💬 Comments 💬 </h4>
       <div className="Comments__container">
 
         { loadedComments.map((comment)=> {
           return (
             <div key={comment.comment_id} className="Comments__item">
-            <blockquote>
+
             <p>"{comment.body}"</p>
-            <p> — {comment.author}</p> 
-            </blockquote>
+            <p className="smallerFont"> 👤 {comment.author}</p> 
+
             { comment.author === userLogin ? <CommentRemoval comment_id={comment.comment_id} setLoadedComments={setLoadedComments} setLatestCommentCrt={setLatestCommentCrt}/> : null }
             </div>
           )
