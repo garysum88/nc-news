@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import { useParams, useSearchParams, Link} from "react-router-dom"
 
 import { fetchArticles, fetchArticlesByTopic } from "../utils/api";
-import { LoadingMsg } from "../utils/messages"
+import { LoadingMsg, SelectTopicAndSortByError} from "../utils/messages"
 
 function ListArticles () {
 
   const [articles, setArticles] = useState({})
   const [isLoading, setIsLoading] = useState(true)
+  const [isError, setIsError] = useState(false)
 
   const [searchParams] = useSearchParams();
   
@@ -45,13 +46,20 @@ function ListArticles () {
     else {
       fetchArticlesByTopic(topic,fetchStr)
       .then(({data})=>{
+        setIsError(false)
         setArticles(data.articles)
         setIsLoading(false)
+      })
+      .catch((err)=>{
+        setIsError(true)
       })
     }
  
   },[topic,topicSelected,sort_by,order,fetchStr])
 
+  if (isError) {
+    return SelectTopicAndSortByError()
+  }
 
   if (isLoading) {
     return LoadingMsg()

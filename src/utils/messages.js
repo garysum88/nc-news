@@ -55,3 +55,8 @@ export const DeleteCommentErrMsg = () => {
     return  <p>An error is occured when deleting the comment.</p>
 
 }
+
+export const SelectTopicAndSortByError = () => {
+    return  <p>Bad request (Non-existent topic / Invalid sorting / Invalid order) </p>
+
+}
