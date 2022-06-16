@@ -55,21 +55,19 @@ function ViewArticle () {
 
     return (
       <>
-      <h3>View Article</h3>
-
       <div className="Article__container">
 
 
             <div className="Article__item">
-            <h4>{article.title}</h4>
-            <p>{article.body}</p>
-            <p>Author : {article.author}</p>
-            <p>Topic : {article.topic}</p>
-            <p>Created at: {convertedDateAndTime}</p>
-            <p><em>{latestCommentCrt} comment{latestCommentCrt !==0 ? "s" : null} </em></p>
-            <Vote article_id={article_id} votes={article.votes}/>
+            <div className={"TopicLabel--" + article.topic}>{article.topic}</div>
+            <h4 className="largerFont">{article.title}</h4>
+            <p className="normalFont">{article.body}</p>
+            <p className="smallerFont"><strong>Author:</strong> {article.author}</p>
+            <p className="smallerFont"><strong>Date</strong>: {convertedDateAndTime}</p>
+            {/* <p className="smallerFont">💬  {latestCommentCrt}</p> */}
+            <Vote article_id={article_id} votes={article.votes} latestCommentCrt={latestCommentCrt}/>
             <p></p>
-            <p><button type="Submit" onClick={() => navigate(-1)}>Back</button> </p>
+            <p className="normalFont"><button type="Submit" onClick={() => navigate(-1)}>Back</button> </p>
             </div>
       </div>
       

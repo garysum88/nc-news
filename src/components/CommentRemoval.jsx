@@ -37,7 +37,7 @@ function CommentRemoval ({setLoadedComments, comment_id, setLatestCommentCrt}) {
         <>
         { isError? DeleteCommentErrMsg() : null }
     
-        <button onClick={()=>handleClick()}>Delete my comment</button>
+        <button className="RemoveButton" onClick={()=>handleClick()}>❌ Delete</button>
         </>
         
     )

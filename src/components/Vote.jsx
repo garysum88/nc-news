@@ -4,7 +4,7 @@ import { VoteErrorMsg } from "../utils/messages";
 
 
 
-function Vote ({article_id,votes}) {
+function Vote ({article_id,votes,latestCommentCrt}) {
 
   const [voteNum, setVoteNum] = useState(0)
   const [isError, setIsError] = useState(false)
@@ -28,9 +28,9 @@ function Vote ({article_id,votes}) {
       <>
 
 
-     <p>Net votes : {votes + voteNum} </p>
+     <p className="smallerFont"> 👍🏻 {votes + voteNum} 💬  {latestCommentCrt}</p>
 
-     <p><button type="Submit" onClick={()=> handleVote(1)}>👍🏻</button> <button type="Submit" onClick={()=> handleVote(-1)}>👎🏻</button> </p>
+     <p className="smallerFont"><button className="VoteButton" type="Submit" onClick={()=> handleVote(1)}>👍🏻 Upvote</button> <button className="VoteButton"  type="Submit" onClick={()=> handleVote(-1)}>👎🏻 Downvote</button> </p>
      { isError ? VoteErrorMsg() : ""}
 
       </>
