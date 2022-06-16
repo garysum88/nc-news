@@ -9,9 +9,15 @@ function ListArticles () {
   const [articles, setArticles] = useState({})
   const [isLoading, setIsLoading] = useState(true)
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   
+  const sort_by = searchParams.get('sort_by')
+  const order = searchParams.get('order')
 
+  let fetchStr = ""
+  if (sort_by) {
+    fetchStr = `?sort_by=${sort_by? sort_by : ""}&order=${order? order : "asc"}`
+  }
 
 
   let { topic } = useParams()
@@ -27,7 +33,7 @@ function ListArticles () {
   useEffect(()=>{
 
     if (topicSelected==="all") {
-      fetchArticles()
+      fetchArticles(fetchStr)
       .then(({data})=>{
         setArticles(data.articles)
         setIsLoading(false)
@@ -35,14 +41,14 @@ function ListArticles () {
     }
 
     else {
-      fetchArticlesByTopic(topic)
+      fetchArticlesByTopic(topic,fetchStr)
       .then(({data})=>{
         setArticles(data.articles)
         setIsLoading(false)
       })
     }
  
-  },[topic])
+  },[topic,topicSelected,sort_by,order,fetchStr])
 
 
   if (isLoading) {

@@ -4,15 +4,21 @@ const api = axios.create({
     baseURL: 'http://api.garysum.com/api',
 })
 
-export const fetchArticles = () => {
+export const fetchArticles = (fetchStr) => {
 
+  if (fetchStr ==="") {
       return api.get(`/articles`)
-
+    }
+    return api.get(`/articles${fetchStr}`)
 }
 
-export const fetchArticlesByTopic = (topic) => {
+export const fetchArticlesByTopic = (topic,fetchStr) => {
 
+  if (fetchStr ==="") {
     return api.get(`/articles?topic=${topic}`)
+   }
+   return api.get(`/articles${fetchStr}&topic=${topic}`)
+   
   }
  
 
