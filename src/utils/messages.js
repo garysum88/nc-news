@@ -45,3 +45,13 @@ export const ArticleNotExistsMsg = () => {
     return  <p>The article ID you entered does not exist!</p>
 
 }
+
+export const DeletingComment = () => {
+    return  <p>Deleting the comment...</p>
+
+}
+
+export const DeleteCommentErrMsg = () => {
+    return  <p>An error is occured when deleting the comment.</p>
+
+}

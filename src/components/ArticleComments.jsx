@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext} from "react";
 import { fetchCommentsByID} from "../utils/api";
 import { LoadingMsg } from "../utils/messages";
+import { UserLoginContext } from "../contexts/User";
+
+import CommentRemoval from "./CommentRemoval";
 
 
+function ArticleComments ({article_id, submitStatus, submitComments, setDeletedComments}) {
 
-
-function ArticleComments ({article_id, submitStatus, submitComments}) {
-
-
+  const { userLogin } = useContext(UserLoginContext)
 
   const [loadedComments, setLoadedComments] = useState({})
   const [isLoading, setIsLoading] = useState(true)
@@ -42,7 +43,7 @@ function ArticleComments ({article_id, submitStatus, submitComments}) {
             <p>"{comment.body}"</p>
             <p> — {comment.author}</p> 
             </blockquote>
-
+            { comment.author === userLogin ? <CommentRemoval comment_id={comment.comment_id} setLoadedComments={setLoadedComments} setDeletedComments={setDeletedComments}/> : null }
             </div>
           )
         })}
