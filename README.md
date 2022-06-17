@@ -8,7 +8,7 @@ NC News is a social news aggregation, web content rating, and discussion website
 It interacts with an [API](https://garysum-news.herokuapp.com/api) which was developed during my backend project in Northcoders Bootcamp course and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Links :
-  NC News (Deployed version) : https://garysum-nc-news.netlify.app  
+  NC News (Deployed version) : http://app.garysum.com   
   NC News Repo on Github : https://github.com/garysum88/nc-news.git  
   Backend API (Deployed version) : https://garysum-news.herokuapp.com/api  
   Backend API Repo on Github : https://github.com/garysum88/be-nc-news.git  
