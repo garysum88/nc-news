@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'http://api.garysum.com/api',
+    baseURL: 'https://garysum-news.herokuapp.com/api',
 })
 
 export const fetchArticles = (fetchStr) => {

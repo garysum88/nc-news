@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# NC News 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## TLDR (Too Long, Didn't Read)
 
-In the project directory, you can run:
+NC News is a social news aggregation, web content rating, and discussion website.
 
-### `npm start`
+It interacts with an [API](https://garysum-news.herokuapp.com/api) which was developed during my backend project in Northcoders Bootcamp course and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Links :
+  NC News (Deployed version) : https://garysum-nc-news.netlify.app  
+  NC News Repo on Github : https://github.com/garysum88/nc-news.git  
+  Backend API (Deployed version) : https://garysum-news.herokuapp.com/api  
+  Backend API Repo on Github : https://github.com/garysum88/be-nc-news.git  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+ 
+## Background
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+NC News is a social news aggregation, web content rating, and discussion website.
 
-### `npm run build`
+NC News has articles which are divided into topics. Each article has user curated ratings and can be up or down voted using the API. Users can also add comments about an article.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In this app, an user can:
+- view a list of all available articles
+- view a seperate page for each topic with a list of related articles
+- view a list of articles with different display options (sort by date/title/topic/author/votes , ascending or descending order)
+- view an individual airticle
+- vote on an article
+- post a comment to an article (once logged in) 
+- delete a comment that is posted by the user (once logged in) 
+- review the basic information of an user (username, name and avatar image)  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## How to run this app locally?
+In order to run this app locally, you have Node.js version 17 installed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the [Repo](https://github.com/garysum88/nc-news.git) in your command line interface
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+git clone https://github.com/garysum88/nc-news.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Change the current directory to the 'nc-news' folder
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+cd nc-news
+```
 
-## Learn More
+3. Run the app in the development mode
+```
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Your web browser should now open. If not, open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. To kill from the app from running, press Ctrl + C in your command line terminal.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact :
+  If you have any question about this app, feel free to contact me at garysum@gmail.com
