@@ -13,8 +13,6 @@ function ArticleComments ({article_id, submitComments, setLatestCommentCrt}) {
   const [loadedComments, setLoadedComments] = useState({})
   const [isLoading, setIsLoading] = useState(true)
 
-  const [hiddenComments, setHiddenComments] = useState([])
-  const [showAllStatus, setShowAllStatus] = useState(false)
   const [deleteCommentCrt, setDeleteCommentCrt] = useState(0)
 
   useEffect(()=>{
@@ -22,35 +20,11 @@ function ArticleComments ({article_id, submitComments, setLatestCommentCrt}) {
     fetchCommentsByID(article_id)
     .then(({data:{comments}})=>{
 
-      if (comments.length > 5) {
-        setHiddenComments((curr)=>{
-        let copiedArr = [...comments].splice(0,comments.length-5)
-        return copiedArr
-        })
-        setLoadedComments((curr)=>{
-        let copiedArr = [...comments].splice(comments.length - comments.length -5, 5)
-        return copiedArr
-        })
-        setIsLoading(false)
-      }
-
-      else {
         setLoadedComments(comments)
         setIsLoading(false)
-      }
     })
     
   },[article_id, submitComments,deleteCommentCrt])
-
-
-const showAll = (event) => {
-  setShowAllStatus(true)
-
-  setLoadedComments((currArr)=> {
-    let merged = hiddenComments.concat(currArr)
-    return merged
-  })
-}
 
   if (isLoading) {
     return LoadingMsg()
@@ -78,7 +52,6 @@ const showAll = (event) => {
 
       </div>
 
-      {showAllStatus === false && hiddenComments.length >0 ? <button onClick={()=>showAll()}>Show all comments</button> : ""}
       </>
     )
 }

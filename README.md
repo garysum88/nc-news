@@ -5,7 +5,7 @@
 
 NC News is a social news aggregation, web content rating, and discussion website.
 
-It interacts with an [API](https://garysum-news.herokuapp.com/api) which was developed during my backend project in Northcoders Bootcamp course and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It interacts with an [API](https://garysum-news.herokuapp.com/api) which was developed during my backend project in Northcoders Bootcamp course.
 
 ### Links :
   NC News (Deployed version) : http://app.garysum.com   
@@ -31,7 +31,7 @@ In this app, an user can:
 - delete a comment that is posted by the user (once logged in) 
 - review the basic information of an user (username, name and avatar image)  
 
-
+This app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to run this app locally?
 In order to run this app locally, you have Node.js version 17 installed.
@@ -48,15 +48,29 @@ git clone https://github.com/garysum88/nc-news.git
 cd nc-news
 ```
 
-3. Run the app in the development mode
+3. Install the dependencies to the app
+```
+npm install
+```
+
+4. Run the app in the development mode
 ```
 npm start
 ```
 
-4. Your web browser should now open. If not, open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5. Your web browser should now open. If not, open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-5. To kill from the app from running, press Ctrl + C in your command line terminal.
+6. To stop the app from running in local environment, press Ctrl + C in your command line terminal.
 
 
+## Dependencies
+
+```
+"axios": "^0.27.2",
+"dayjs": "^1.11.3",
+"react": "^18.1.0",
+"react-dom": "^18.1.0","react-router-dom": "^6.3.0",
+"react-scripts": "5.0.1",
+```
 ## Contact :
   If you have any question about this app, feel free to contact me at garysum@gmail.com
