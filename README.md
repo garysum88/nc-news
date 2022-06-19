@@ -34,7 +34,7 @@ In this app, an user can:
 This app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to run this app locally?
-In order to run this app locally, you have Node.js version 17 installed.
+In order to run this app locally, make sur you have Node.js version 17 installed.
 
 1. Clone the [Repo](https://github.com/garysum88/nc-news.git) in your command line interface
 
