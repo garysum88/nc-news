@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import { fetchArticleByID } from "../utils/api";
 import { LoadingMsg, ArticleNotExistsMsg} from "../utils/messages"
 
@@ -24,7 +24,6 @@ function ViewArticle () {
 
 
   const navigate = useNavigate()
-  const location = useLocation()
 
 
   let { article_id } = useParams()
@@ -52,9 +51,6 @@ function ViewArticle () {
     return LoadingMsg()
   }
 
-
-  
-console.log(location)
 
     return (
       <>

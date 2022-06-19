@@ -30,6 +30,7 @@ function ArticleComments ({article_id, submitComments, setLatestCommentCrt}) {
     return LoadingMsg()
   }
 
+  console.log(loadedComments)
 
     return (
       <>
