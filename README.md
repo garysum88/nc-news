@@ -25,7 +25,7 @@ In this app, an user can:
 - view a list of all available articles
 - view a seperate page for each topic with a list of related articles
 - view a list of articles with different display options (sort by date/title/topic/author/votes , ascending or descending order)
-- view an individual airticle
+- view an individual article
 - vote on an article
 - post a comment to an article (once logged in) 
 - delete a comment that is posted by the user (once logged in) 
